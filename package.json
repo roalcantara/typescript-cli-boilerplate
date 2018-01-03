@@ -1,0 +1,18 @@
+{
+  "name": "typescript-cli-boilerplate",
+  "version": "0.1.0",
+  "description": "A Typescript CLI Boilerplate",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "cli",
+    "boilerplate"
+  ],
+  "author": "@roalcantara",
+  "url": "https://github.com/roalcantara/typescript-cli-boilerplate/issues",
+  "email": "rogerio.alcantara@gmail.com",
+  "license": "MIT"
+}
