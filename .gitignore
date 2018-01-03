@@ -61,6 +61,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Output folder
+dist/
 
 ### OSX ###
 *.DS_Store
