@@ -20,12 +20,17 @@ To run this project you need to have:
 3. `$ cd typescript-cli-boilerplate` - Go into the project folder
 4. `$ yarn` - Run the setup script
 
+## Running specs
+
+`$ yarn test` to run the specs
+
 ## How to contribute
 
 1. Follow the [Semantic Versioning Specification](http://semver.org/)
 2. Follow the [GitHub Flow](https://guides.github.com/introduction/flow/)
 3. Follow the [5 Useful Tips For A Better Commit Message](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message) article and the [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/) post
 4. Use [Commitizen cli](http://commitizen.github.io/cz-cli/) when committing
+5. Apply the [Better Specs](http://www.betterspecs.org/) best practices for testing - as much as possible, obviously
 
 ## License
 
