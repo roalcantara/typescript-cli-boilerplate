@@ -3,6 +3,7 @@ extends:
 - tslint:recommended
 - tslint-eslint-rules
 - tslint-clean-code
+- rxjs-tslint-rules
 rules:
   callable-types: true
   class-name: true
@@ -144,3 +145,11 @@ rules:
   no-map-without-usage: true
   no-complex-conditionals: true
   prefer-dry-conditionals: true
+  rxjs-no-add:
+    severity: error
+  rxjs-no-operator:
+    severity: error
+  rxjs-no-patched:
+    severity: error
+  rxjs-no-wholesale:
+    severity: error
