@@ -1,6 +1,7 @@
 ---
 extends:
 - tslint:recommended
+- tslint-eslint-rules
 rules:
   callable-types: true
   class-name: true
@@ -109,3 +110,24 @@ rules:
   interface-name:
   - true
   - never-prefix
+  brace-style:
+  - true
+  - 1tbs
+  - allowSingleLine: true
+  block-spacing:
+  - true
+  - always
+  ter-indent:
+  - true
+  - 2
+  - SwitchCase: 1
+  ter-padded-blocks:
+  - true
+  - never
+  ter-newline-after-var:
+  - true
+  - always
+  ter-no-irregular-whitespace:
+  - true
+  ter-no-sparse-arrays:
+  - true
