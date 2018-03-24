@@ -24,5 +24,8 @@
     "tslint-clean-code": "^0.2.5",
     "tslint-eslint-rules": "^5.1.0",
     "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "rxjs": "^5.5.7"
   }
 }
