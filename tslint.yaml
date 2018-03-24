@@ -2,6 +2,7 @@
 extends:
 - tslint:recommended
 - tslint-eslint-rules
+- tslint-clean-code
 rules:
   callable-types: true
   class-name: true
@@ -131,3 +132,15 @@ rules:
   - true
   ter-no-sparse-arrays:
   - true
+  id-length:
+  - true
+  - - _
+    - x
+    - y
+    - i
+    - j
+    - T
+  try-catch-first: true
+  no-map-without-usage: true
+  no-complex-conditionals: true
+  prefer-dry-conditionals: true
