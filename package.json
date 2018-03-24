@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "lint": "tslint --project tsconfig.json src/**/*.ts"
   },
   "keywords": [
     "typescript",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/node": "^9.6.0",
     "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
     "typescript": "^2.7.2"
   }
 }
