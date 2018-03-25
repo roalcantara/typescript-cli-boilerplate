@@ -8,7 +8,8 @@
     "tsc": "tsc",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
     "test": "./node_modules/.bin/ts-mocha -p . src/**/**.spec.ts",
-    "pokedex": "ts-node src/commands/pokedex.cmd.ts"
+    "pokedex": "ts-node src/commands/pokedex.cmd.ts",
+    "imdb": "ts-node src/commands/imdb.cmd.ts"
   },
   "keywords": [
     "typescript",

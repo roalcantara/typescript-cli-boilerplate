@@ -31,6 +31,11 @@ To run this project you need to have:
 - `$ yarn pokedex -h` to see the options
 - `$ yarn pokedex find` to find Pokémons by name
 
+### IMDB
+
+- `$ yarn imdb -h` to see the options
+- `$ yarn imdb screenshot` to capture screenshots from the IMDB's website
+
 ## How to contribute
 
 1. Follow the [Semantic Versioning Specification](http://semver.org/)
