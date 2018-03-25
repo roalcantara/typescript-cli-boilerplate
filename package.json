@@ -7,7 +7,8 @@
     "build": "tsc",
     "tsc": "tsc",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
-    "test": "./node_modules/.bin/ts-mocha -p . src/**/**.spec.ts"
+    "test": "./node_modules/.bin/ts-mocha -p . src/**/**.spec.ts",
+    "pokedex": "ts-node src/commands/pokedex.cmd.ts"
   },
   "keywords": [
     "typescript",
@@ -48,6 +49,7 @@
     "commander": "^2.15.1",
     "inquirer": "^5.1.0",
     "ora": "^2.0.0",
+    "pokedex-promise-v2": "^3.1.1",
     "rxjs": "^5.5.7"
   }
 }

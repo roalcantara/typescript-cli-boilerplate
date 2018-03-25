@@ -24,6 +24,13 @@ To run this project you need to have:
 
 `$ yarn test` to run the specs
 
+## Running the project
+
+### Pokédex
+
+- `$ yarn pokedex -h` to see the options
+- `$ yarn pokedex find` to find Pokémons by name
+
 ## How to contribute
 
 1. Follow the [Semantic Versioning Specification](http://semver.org/)
