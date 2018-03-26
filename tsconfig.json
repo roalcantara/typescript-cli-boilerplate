@@ -9,7 +9,8 @@
     "sourceMap": false,
     "strict": true,
     "moduleResolution": "node",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "strictNullChecks": false
   },
   "include": [
     "./**/**.ts"
