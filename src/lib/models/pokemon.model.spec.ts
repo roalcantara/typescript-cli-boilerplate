@@ -1,5 +1,5 @@
-import { Pokemon } from '../../models'
-import { Factory } from '../fixtures'
+import { Pokemon } from './pokemon.model'
+import { Factory } from '../../tests'
 
 describe('Pokemon', () => {
   let pokemon: Pokemon

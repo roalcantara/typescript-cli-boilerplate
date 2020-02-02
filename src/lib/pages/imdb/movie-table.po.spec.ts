@@ -1,38 +1,44 @@
 import cheerio from 'cheerio'
-import fs from 'fs'
 
-import { MovieTable } from '../../../pages/imdb'
+import { Fixture } from '../../../tests'
+
+import { MovieTable } from './movie-table.po'
 
 describe('MovieTable', () => {
   let page: MovieTable
 
   beforeAll(() => {
+<<<<<<< HEAD:src/specs/pages/imdb/movie-table.po.spec.ts
     const path = '../../fixtures/imdb/movies-coming-soon.html'
     const file = fs.readFileSync(path).toString()
     const html = Cheerio.load(file)
+=======
+    const file = Fixture.load('movies-coming-soon.html')
+    const html = cheerio.load(file)
+>>>>>>> 0006477... chore(architecture): Move all source and tests files:src/lib/pages/imdb/movie-table.po.spec.ts
 
     page = new MovieTable(html('.nm-title-overview-widget-layout').first())
   })
 
   describe('#name', () => {
     it('gets the movie`s name', () => {
-      expect(page.name).toEqual('Jogador Nº 1 (2018)')
+      expect(page.name).toEqual('Birds of Prey (2020)')
     })
   })
 
   describe('#director', () => {
     it('gets the movie`s director', () => {
-      expect(page.director).toEqual('Steven Spielberg')
+      expect(page.director).toEqual('Cathy Yan')
     })
   })
 
   describe('#stars', () => {
     it('gets the movie`s stars', () => {
       expect(page.stars).toEqual([
-        'Tye Sheridan',
-        'Olivia Cooke',
-        'Ben Mendelsohn',
-        'Lena Waithe'
+        'Margot Robbie',
+        'Mary Elizabeth Winstead',
+        'Ewan McGregor',
+        'Jurnee Smollett-Bell'
       ])
     })
   })
@@ -40,10 +46,7 @@ describe('MovieTable', () => {
   describe('#description', () => {
     it('gets the movie`s description', () => {
       expect(page.description).toEqual(
-        [
-          'When the creator of a virtual reality world called the OASIS dies, he releases a video in which he challenges all',
-          'OASIS users to find his Easter Egg, which will give the finder his fortune.'
-        ].join(' ')
+        'After splitting with the Joker, Harley Quinn joins superheroes Black Canary, Huntress and Renee Montoya to save a young girl from an evil crime lord.'
       )
     })
   })
