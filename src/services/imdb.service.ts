@@ -1,4 +1,4 @@
-import Chalk from 'chalk'
+import * as chalk from 'chalk'
 import * as Puppeteer from 'puppeteer'
 
 import { NewMovies } from '../pages/imdb'
@@ -24,7 +24,7 @@ class ImdbService {
   async list(option) {
     const url = `${URL}/${option}`
 
-    console.log(Chalk.yellow(` "${url}"..`))
+    console.log(chalk.yellow(` "${url}"..`))
 
     const browser = await Puppeteer.launch()
     const page = await browser.newPage()

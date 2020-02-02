@@ -1,5 +1,3 @@
-import Pokemon from './pokemon.model'
+import { Pokemon } from './pokemon.model'
 
-export {
-  Pokemon
-}
+export { Pokemon }

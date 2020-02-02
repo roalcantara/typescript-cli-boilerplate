@@ -10,7 +10,8 @@ describe('MovieTable', () => {
   let page: MovieTable
 
   before(() => {
-    const path = '/Users/roalcantara/Documents/typescript-cli-boilerplate/src/specs/fixtures/imdb/movies-coming-soon.html'
+    const path =
+      '/Users/roalcantara/Documents/typescript-cli-boilerplate/src/specs/fixtures/imdb/movies-coming-soon.html'
     const file = fs.readFileSync(path).toString()
     const html = Cheerio.load(file)
 
@@ -32,17 +33,22 @@ describe('MovieTable', () => {
   describe('#stars', () => {
     it('gets the movie`s stars', () => {
       expect(page.stars).to.deep.eq([
-        'Tye Sheridan', 'Olivia Cooke', 'Ben Mendelsohn', 'Lena Waithe'
+        'Tye Sheridan',
+        'Olivia Cooke',
+        'Ben Mendelsohn',
+        'Lena Waithe'
       ])
     })
   })
 
   describe('#description', () => {
     it('gets the movie`s description', () => {
-      expect(page.description).to.eq([
-        'When the creator of a virtual reality world called the OASIS dies, he releases a video in which he challenges all',
-        'OASIS users to find his Easter Egg, which will give the finder his fortune.'
-      ].join(' '))
+      expect(page.description).to.eq(
+        [
+          'When the creator of a virtual reality world called the OASIS dies, he releases a video in which he challenges all',
+          'OASIS users to find his Easter Egg, which will give the finder his fortune.'
+        ].join(' ')
+      )
     })
   })
 })

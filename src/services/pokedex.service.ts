@@ -11,10 +11,12 @@ class PokedexService {
 
   findPokemonByName(name: string): Promise<Pokemon> {
     return this.pokedex.getPokemonByName(name).then(res => {
-      return Promise.resolve(new Pokemon({
-        name: res.name,
-        weight: res.weight
-      }))
+      return Promise.resolve(
+        new Pokemon({
+          name: res.name,
+          weight: res.weight
+        })
+      )
     })
   }
 }

@@ -1,9 +1,9 @@
 import * as Cheerio from 'cheerio'
 import * as Puppeteer from 'puppeteer'
 
-import MovieTable from './movie-table.po'
+import { MovieTable } from './movie-table.po'
 
-export default class NewMovies {
+export class NewMovies {
   private moviesTableSelector = '.nm-title-overview-widget-layout'
   private CheerioStatic?: CheerioStatic
 
@@ -13,16 +13,18 @@ export default class NewMovies {
 
   list() {
     if (this.CheerioStatic) {
-      return this.CheerioStatic(this.moviesTableSelector).toArray().map((element, i) => {
-        const movieTable = new MovieTable(this.CheerioStatic(element))
+      return this.CheerioStatic(this.moviesTableSelector)
+        .toArray()
+        .map((element, i) => {
+          const movieTable = new MovieTable(this.CheerioStatic(element))
 
-        return {
-          name: movieTable.name,
-          director: movieTable.director,
-          stars: movieTable.stars,
-          description: movieTable.description
-        }
-      })
+          return {
+            name: movieTable.name,
+            director: movieTable.director,
+            stars: movieTable.stars,
+            description: movieTable.description
+          }
+        })
     }
   }
 

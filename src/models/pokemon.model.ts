@@ -1,21 +1,23 @@
-export default class Pokemon {
+export class Pokemon {
   name?: string
   weight = 0
   flying = false
 
-  constructor({
-    name,
-    weight,
-    flying
-  }: {
-    name?: string,
-    weight?: number,
-    flying?: boolean
-  } = {
-    name: '',
-    weight: 0,
-    flying: false
-  }) {
+  constructor(
+    {
+      name,
+      weight,
+      flying
+    }: {
+      name?: string
+      weight?: number
+      flying?: boolean
+    } = {
+      name: '',
+      weight: 0,
+      flying: false
+    }
+  ) {
     this.name = name
     this.weight = weight
     this.flying = flying

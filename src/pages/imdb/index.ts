@@ -1,7 +1,4 @@
-import MovieTable from './movie-table.po'
-import NewMovies from './new-movies.po'
+import { MovieTable } from './movie-table.po'
+import { NewMovies } from './new-movies.po'
 
-export {
-  MovieTable,
-  NewMovies
-}
+export { MovieTable, NewMovies }

@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import * as chalk from 'chalk'
 import * as cmd from 'commander'
 import * as Inquirer from 'inquirer'
 import * as Ora from 'ora'
@@ -15,17 +15,19 @@ cmd
   .alias('f')
   .action(() => {
     console.log(chalk.yellow('Find a pokemon!'))
-    Inquirer.prompt([{
-      type: 'input',
-      name: 'name',
-      message: `Got it! What's the pokemon name?`,
-      validate: (value: any) => {
-        if (!(value && value.trim().length > 0)) {
-          return chalk.red(`I didn't understand! Come again?`)
+    Inquirer.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: `Got it! What's the pokemon name?`,
+        validate: (value: any) => {
+          if (!(value && value.trim().length > 0)) {
+            return chalk.red(`I didn't understand! Come again?`)
+          }
+          return true
         }
-        return true
       }
-    }]).then((answers: any) => {
+    ]).then((answers: any) => {
       const spinner = Ora(`Searching for "${answers.name}"...`).start()
 
       PokedexService.findPokemonByName(answers.name)
@@ -34,7 +36,8 @@ cmd
           console.log(pokemon)
           console.log('..')
           spinner.stop()
-        }).catch(err => {
+        })
+        .catch(err => {
           console.error(chalk.red(err))
           spinner.stop()
         })
