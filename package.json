@@ -32,6 +32,7 @@
     "@types/inquirer": "^6.5.0",
     "@types/node": "^13.7.0",
     "@types/ora": "^3.2.0",
+    "factory-bot-ts": "^0.1.5",
     "faker": "^4.1.0",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",

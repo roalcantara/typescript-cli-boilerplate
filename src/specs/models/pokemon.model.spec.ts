@@ -8,7 +8,7 @@ describe('Pokemon', () => {
   let pokemon: Pokemon
 
   before(async () => {
-    pokemon = await Factory.build('pokemon', { weight: 9001 })
+    pokemon = Factory.build<Pokemon>('pokemon', { weight: 9001 })
   })
 
   describe('#fight', () => {
@@ -16,7 +16,7 @@ describe('Pokemon', () => {
 
     context('when opponent is lightest', () => {
       before(async () => {
-        opponent = await Factory.build('pokemon', { weight: 9000 })
+        opponent = Factory.build<Pokemon>('pokemon', { weight: 9000 })
       })
 
       it('wins the fight', () => {
@@ -26,7 +26,7 @@ describe('Pokemon', () => {
 
     context('when opponent is heaviest', () => {
       before(async () => {
-        opponent = await Factory.build('pokemon', { weight: 10000000 })
+        opponent = Factory.build<Pokemon>('pokemon', { weight: 10000000 })
       })
 
       it('loses the fight', () => {
@@ -38,7 +38,7 @@ describe('Pokemon', () => {
   describe('#fly', () => {
     context('when it is able to fly', () => {
       before(async () => {
-        pokemon = await Factory.build('pokemon', { flying: true })
+        pokemon = Factory.build<Pokemon>('pokemon', { flying: true })
       })
 
       it('flies asynchronously', async () => {

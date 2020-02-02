@@ -426,6 +426,13 @@ extract-zip@^1.6.6:
     mkdirp "0.5.1"
     yauzl "2.4.1"
 
+factory-bot-ts@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/factory-bot-ts/-/factory-bot-ts-0.1.5.tgz#40ae777a80b905c0442219cb0004c7a8c9892807"
+  integrity sha512-2jpeR5Ny6pdsV/RexGWpHxbZhRE8qv/qWfBEC25/a0f83Fx8eiXDnF7RUuINrRHgG+W0zsHsvCJPLFM+XO4+1Q==
+  dependencies:
+    lodash "^4.17.10"
+
 faker@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/faker/-/faker-4.1.0.tgz#1e45bbbecc6774b3c195fad2835109c6d748cc3f"
@@ -571,7 +578,7 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-lodash@^4.15.0, lodash@^4.17.15:
+lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
