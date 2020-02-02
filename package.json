@@ -6,14 +6,17 @@
     "node": "10",
     "yarn": ">=1.9.0 <2.0.0"
   },
-  "main": "src/index.ts",
+  "main": "ts-node src/main.ts",
   "scripts": {
-    "build": "tsc",
-    "tsc": "tsc",
-    "lint": "tslint --project tsconfig.json src/**/*.ts",
-    "pokedex": "ts-node src/commands/pokedex.cmd.ts",
-    "imdb": "ts-node src/commands/imdb.cmd.ts",
-    "test": "npx jest"
+    "setup": "yarn global add typescript && prettier && npx && jest",
+    "clear": "rm -r ./dist && rm -r .tmp || true",
+    "purge": "yarn clear && rm -rf node_modules",
+    "reset": "yarn purge && yarn",
+    "build": "npx tsc --p tsconfig.json",
+    "tsc": "npx tsc",
+    "lint": "npx tslint --project tsconfig.json src/**/*.ts",
+    "test": "npx jest",
+    "start": "ts-node src/lib/main.ts"
   },
   "keywords": [
     "typescript",
