@@ -34,7 +34,7 @@
     "@types/ora": "^3.2.0",
     "faker": "^4.1.0",
     "ts-node": "^8.6.2",
-    "tslint": "^5.9.1",
+    "tslint": "^6.0.0",
     "typescript": "^3.7.5"
   },
   "dependencies": {
