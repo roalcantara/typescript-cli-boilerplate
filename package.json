@@ -11,9 +11,9 @@
     "build": "tsc",
     "tsc": "tsc",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
-    "test": "./node_modules/.bin/ts-mocha -p . src/**/**.spec.ts",
     "pokedex": "ts-node src/commands/pokedex.cmd.ts",
-    "imdb": "ts-node src/commands/imdb.cmd.ts"
+    "imdb": "ts-node src/commands/imdb.cmd.ts",
+    "test": "npx jest"
   },
   "keywords": [
     "typescript",
@@ -31,10 +31,13 @@
     "@types/faker": "^4.1.9",
     "@types/inquirer": "^6.5.0",
     "@types/lodash": "^4.14.149",
+    "@types/jest": "^25.1.1",
     "@types/node": "^13.7.0",
     "@types/ora": "^3.2.0",
     "factory-bot-ts": "^0.1.5",
     "faker": "^4.1.0",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.1.0",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
     "typescript": "^3.7.5"

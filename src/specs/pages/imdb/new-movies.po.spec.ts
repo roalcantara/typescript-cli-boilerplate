@@ -1,17 +1,12 @@
-import * as chai from 'chai'
-import * as fs from 'fs'
-
-const expect = chai.expect
+import fs from 'fs'
 
 import { NewMovies } from '../../../pages/imdb'
-import Factory from '../../fixtures'
 
 describe('NewMovies', () => {
   let page: NewMovies
 
-  before(() => {
-    const path =
-      '/Users/roalcantara/Documents/typescript-cli-boilerplate/src/specs/fixtures/imdb/movies-coming-soon.html'
+  beforeAll(() => {
+    const path = '../../fixtures/imdb/movies-coming-soon.html'
     const html = fs.readFileSync(path).toString()
 
     page = new NewMovies(html)
@@ -19,7 +14,7 @@ describe('NewMovies', () => {
 
   describe('#list', () => {
     it('gets all movies', () => {
-      expect(page.list()).to.deep.eq([
+      expect(page.list()).toEqual([
         {
           name: 'Jogador Nº 1 (2018)',
           director: 'Steven Spielberg',
