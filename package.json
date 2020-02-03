@@ -29,6 +29,7 @@
   "url": "https://github.com/roalcantara/typescript-cli-boilerplate/issues",
   "email": "rogerio.alcantara@gmail.com",
   "license": "MIT",
+  "private": true,
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
