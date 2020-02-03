@@ -1,14 +1,14 @@
 import { FactoryBot } from 'factory-bot-ts'
-import Faker from 'faker/locale/pt_BR'
+import faker from 'faker'
 
 import { Pokemon } from '../../lib/models'
 
 FactoryBot.define(
   'pokemon',
   {
-    name: Faker.name.findName(),
-    strength: Faker.random.number(),
-    flying: Faker.random.boolean()
+    name: faker.name.findName(),
+    strength: faker.random.number(),
+    flying: faker.random.boolean()
   },
   Pokemon
 )

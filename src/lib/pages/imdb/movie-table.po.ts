@@ -1,43 +1,43 @@
-import Cheerio from "cheerio";
-import { compact } from "lodash";
+import Cheerio from 'cheerio'
+import { compact } from 'lodash'
 
 export class MovieTable {
-  protected element: Cheerio;
+  protected element: Cheerio
 
   constructor(node: Cheerio) {
-    this.element = Cheerio(node);
+    this.element = Cheerio(node)
   }
 
   get name(): string {
     return this.element
-      .find("h4")
+      .find('h4')
       .text()
-      .trim();
+      .trim()
   }
 
   get director(): string {
     return this.element
-      .find("div:nth-child(5) > span > a")
+      .find('div:nth-child(5) > span > a')
       .text()
-      .trim();
+      .trim()
   }
 
   get stars(): Array<string> {
     return compact(
       this.element
-        .find("div:nth-child(6)")
+        .find('div:nth-child(6)')
         .text()
-        .replace("Stars:", "")
-        .replace(/ \n\s+/g, "")
+        .replace('Stars:', '')
+        .replace(/ \n\s+/g, '')
         .trim()
-        .split(",") || []
-    );
+        .split(',') || []
+    )
   }
 
   get description(): string {
     return this.element
-      .find(".outline")
+      .find('.outline')
       .text()
-      .trim();
+      .trim()
   }
 }
