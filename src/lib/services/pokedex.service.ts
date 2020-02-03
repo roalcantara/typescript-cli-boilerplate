@@ -1,6 +1,6 @@
-import Pokedex from "pokedex-promise-v2";
+import Pokedex from 'pokedex-promise-v2'
 
-import { Pokemon } from "../models";
+import { Pokemon } from '../models'
 
 export const pokedexService = {
   findPokemonByName: (name: string): Promise<Pokemon> =>
@@ -11,4 +11,4 @@ export const pokedexService = {
           weight: res.weight
         })
     )
-};
+}
