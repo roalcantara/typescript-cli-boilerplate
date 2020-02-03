@@ -8,7 +8,7 @@
   },
   "main": "ts-node src/main.ts",
   "scripts": {
-    "setup": "yarn global add typescript && prettier && npx && jest",
+    "setup": "yarn global add typescript && prettier && npx && jest && @commitlint/cli && husky",
     "clear": "rm -r ./dist && rm -r .tmp || true",
     "purge": "yarn clear && rm -rf node_modules",
     "reset": "yarn purge && yarn",
@@ -17,6 +17,7 @@
     "lint": "npx tslint --project tsconfig.json src/**/*.ts",
     "test": "npx jest",
     "start": "ts-node src/lib/main.ts",
+    "commit": "commit",
     "semantic-release": "semantic-release"
   },
   "keywords": [
@@ -29,6 +30,8 @@
   "email": "rogerio.alcantara@gmail.com",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
@@ -46,6 +49,7 @@
     "factory-bot-ts": "^0.1.5",
     "faker": "^4.1.0",
     "html-loader-jest": "^0.2.1",
+    "husky": "^4.2.1",
     "jest": "^25.1.0",
     "semantic-release": "^17.0.2",
     "ts-jest": "^25.1.0",
@@ -67,5 +71,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/roalcantara/typescript-cli-boilerplate.git"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
