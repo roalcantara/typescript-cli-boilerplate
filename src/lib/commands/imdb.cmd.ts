@@ -1,51 +1,60 @@
 // tslint:disable: no-console
-import { cyanBright, red, yellow } from 'chalk'
-import inquirer from 'inquirer'
-import Ora from 'ora'
-import * as util from 'util'
+import { cyanBright, red, yellow } from "chalk";
+import inquirer from "inquirer";
+import Ora from "ora";
+import * as util from "util";
 
+<<<<<<< HEAD
 import { imdbService } from '../services'
+=======
+import { imdbService } from "../services";
+>>>>>>> 1c3e6a6... chore(checkstyle): Add Prettier
 
-const options = ['Movies In Theaters', 'Movies Coming Soon']
+const options = ["Movies In Theaters", "Movies Coming Soon"];
 
 export const imdbCmd = async () => {
-  console.info(cyanBright(`\n[IMDB] Searching for rosebud, then? 🧐!!\n`))
+  console.info(cyanBright(`\n[IMDB] Searching for rosebud, then? 🧐!!\n`));
 
   const answers = await inquirer.prompt([
     {
-      type: 'list',
-      name: 'option',
-      message: yellow('Got it! Keen on?'),
+      type: "list",
+      name: "option",
+      message: yellow("Got it! Keen on?"),
       choices: options,
       filter: (val: any) => {
         return val
           .toLowerCase()
-          .split(' ')
-          .join('-')
+          .split(" ")
+          .join("-");
       }
     }
-  ])
+  ]);
 
-  return findMovies(answers.option)
-}
+  return findMovies(answers.option);
+};
 
 const findMovies = async (option: string) => {
-  const spinner = Ora(`Loading movies...\n\n`).start()
+  const spinner = Ora(`Loading movies...\n\n`).start();
 
+<<<<<<< HEAD
   return imdbService.list(option)
+=======
+  return imdbService
+    .list(option)
+>>>>>>> 1c3e6a6... chore(checkstyle): Add Prettier
     .then(movies => {
-      console.log(yellow(`\nAnd there we go..\n`))
-      console.log(prettify(movies))
-      console.log('\n')
-      spinner.stop()
+      console.log(yellow(`\nAnd there we go..\n`));
+      console.log(prettify(movies));
+      console.log("\n");
+      spinner.stop();
     })
     .catch(err => {
-      spinner.stop()
+      spinner.stop();
       console.log(red(`\nOps!! Something went really, really bad!! ☠️`), {
         err
-      })
-    })
-}
+      });
+    });
+};
 
 const prettify = (message: any) =>
   util.inspect(message, {
@@ -54,4 +63,4 @@ const prettify = (message: any) =>
     breakLength: 240,
     compact: false,
     showHidden: false
-  })
+  });

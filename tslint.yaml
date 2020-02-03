@@ -2,6 +2,7 @@
 extends:
   - tslint:latest
   - tslint:recommended
+  - tslint-config-prettier
 
 rules:
   # Class and Member design

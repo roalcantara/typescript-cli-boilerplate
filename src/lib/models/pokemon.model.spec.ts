@@ -1,46 +1,47 @@
-import { Pokemon } from './pokemon.model'
-import { Factory } from '../../tests'
+import { Factory } from "../../tests";
 
-describe('Pokemon', () => {
-  let pokemon: Pokemon
+import { Pokemon } from "./pokemon.model";
 
-  beforeAll(async () => {
-    pokemon = Factory.build<Pokemon>('pokemon', { weight: 9001 })
-  })
+describe("Pokemon", () => {
+  let pokemon: Pokemon;
 
-  describe('#fight', () => {
-    let opponent: Pokemon
+  beforeAll(() => {
+    pokemon = Factory.build<Pokemon>("pokemon", { weight: 9001 });
+  });
 
-    describe('when opponent is lightest', () => {
-      beforeEach(async () => {
-        opponent = Factory.build<Pokemon>('pokemon', { weight: 9000 })
-      })
+  describe("#fight", () => {
+    let opponent: Pokemon;
 
-      it('wins the fight', () => {
-        expect(pokemon.fight(opponent)).toEqual(true)
-      })
-    })
+    describe("when opponent is lightest", () => {
+      beforeEach(() => {
+        opponent = Factory.build<Pokemon>("pokemon", { weight: 9000 });
+      });
 
-    describe('when opponent is heaviest', () => {
-      beforeEach(async () => {
-        opponent = Factory.build<Pokemon>('pokemon', { weight: 10000000 })
-      })
+      it("wins the fight", () => {
+        expect(pokemon.fight(opponent)).toEqual(true);
+      });
+    });
 
-      it('loses the fight', () => {
-        expect(pokemon.fight(opponent)).toEqual(false)
-      })
-    })
-  })
+    describe("when opponent is heaviest", () => {
+      beforeEach(() => {
+        opponent = Factory.build<Pokemon>("pokemon", { weight: 10000000 });
+      });
 
-  describe('#fly', () => {
-    describe('when it is able to fly', () => {
-      beforeEach(async () => {
-        pokemon = Factory.build<Pokemon>('pokemon', { flying: true })
-      })
+      it("loses the fight", () => {
+        expect(pokemon.fight(opponent)).toEqual(false);
+      });
+    });
+  });
 
-      it('flies asynchronously', async () => {
-        expect(await pokemon.fly(500)).toEqual(true)
-      })
-    })
-  })
-})
+  describe("#fly", () => {
+    describe("when it is able to fly", () => {
+      beforeEach(() => {
+        pokemon = Factory.build<Pokemon>("pokemon", { flying: true });
+      });
+
+      it("flies asynchronously", async () => {
+        expect(await pokemon.fly(500)).toEqual(true);
+      });
+    });
+  });
+});
