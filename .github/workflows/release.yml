@@ -1,0 +1,26 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Use Node.js 10
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - name: Build
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TYPESCRIPT_CLI_RELEASE_TOKEN }}
+        run: npx semantic-release
