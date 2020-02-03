@@ -18,7 +18,8 @@
     "test": "npx jest",
     "start": "ts-node src/lib/main.ts",
     "commit": "commit",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "semantic-release:dry-run": "export $(cat .env | xargs) && npx semantic-release --dry-run --no-ci --debug"
   },
   "keywords": [
     "typescript",
