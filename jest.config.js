@@ -1,9 +1,12 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
-  testMatch: ['**/*.spec.ts'],
+  testMatch: ['<rootDir>/src/**/*.spec.ts'],
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  moduleFileExtensions: ['ts', 'js', 'html', 'json'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.html?$': 'html-loader-jest'
   },
   moduleFileExtensions: ['ts', 'js', 'json'],
-  coverageReporters: ['text']
+  coverageReporters: ['text'],
+  moduleDirectories: ['<rootDir>/node_modules', '<rootDir>/src/tests']
 }
