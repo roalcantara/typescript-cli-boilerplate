@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/roalcantara/typescript-cli-boilerplate/compare/v1.0.0...v1.0.1) (2020-02-03)
+
+### Bug Fixes
+
+- Remove obsolete files ([6b49f77](https://github.com/roalcantara/typescript-cli-boilerplate/commit/6b49f77654a2ca5d0a1988e8eb8734d10f0ade27))
+
 # 1.0.0 (2020-02-03)
 
 ### Bug Fixes
