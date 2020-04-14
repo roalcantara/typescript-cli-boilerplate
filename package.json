@@ -63,7 +63,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "cheerio": "^1.0.0-rc.3",
     "inquirer": "^7.1.0",
     "lodash": "^4.17.15",
