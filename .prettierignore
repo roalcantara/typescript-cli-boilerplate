@@ -1,0 +1,26 @@
+# Add files here to ignore them from prettier formatting
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/coverage
+
+# dependencies
+/node_modules
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Workspace
+angular.json
+firebase.json
+package.json
+nx.json
+*/**/tsconfig.*
+*/**/jest.config.*
+*/**/proxy.conf*
