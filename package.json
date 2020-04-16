@@ -69,7 +69,7 @@
     "lodash": "^4.17.15",
     "ora": "^4.0.3",
     "pokedex-promise-v2": "^3.2.0",
-    "puppeteer": "^2.1.1",
+    "puppeteer": "^3.0.0",
     "rxjs": "^6.5.5",
     "tslib": "^1.11.1",
     "yargs": "^15.3.1"
