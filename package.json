@@ -67,7 +67,7 @@
     "cheerio": "^1.0.0-rc.3",
     "inquirer": "^7.1.0",
     "lodash": "^4.17.15",
-    "ora": "^4.0.3",
+    "ora": "^4.0.4",
     "pokedex-promise-v2": "^3.2.0",
     "puppeteer": "^2.1.1",
     "rxjs": "^6.5.5",
